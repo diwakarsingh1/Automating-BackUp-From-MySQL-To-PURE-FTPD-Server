@@ -1,0 +1,3 @@
+#The script will run sharp at 10 PM Daily with the help of cron job.
+
+0 22 * * * /root/backup_script.sh
