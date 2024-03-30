@@ -116,3 +116,4 @@ This project implements a full automation of generating a timestamped backup of 
 
     0 22 * * * /root/backup-script.sh
 
+# Voila!💥 Your automation of generating a timestamped backup of a specified MySQL database is ready.
