@@ -69,7 +69,7 @@ This project implements a full automation of generating a timestamped backup of 
     #!/usr/bin/bash
 
     DATE=`date "+%Y_%B_%T"`
-    DB_NAME="sh_task"
+    DB_NAME="my_database"
 
     #  FTP CREDENTAILS
 
