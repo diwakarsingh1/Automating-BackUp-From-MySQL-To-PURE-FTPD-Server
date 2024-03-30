@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 DATE=`date "+%Y_%B_%T"`
-DB_NAME="sh_task"
+DB_NAME="my_database"
 
 #  FTP CREDENTAILS
 
