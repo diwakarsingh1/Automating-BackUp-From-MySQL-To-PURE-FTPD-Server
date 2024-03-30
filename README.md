@@ -33,3 +33,4 @@ This project implements a full automation of generating a timestamped backup of 
     SELECT * FROM table1;
 
 # Step 7: Create the file with name [ .my.cnf ] for storing the mysql credentials.
+![](/Automating-BackUp-From-MySQL-To-PURE-FTPD-Server/.my.cnf)
