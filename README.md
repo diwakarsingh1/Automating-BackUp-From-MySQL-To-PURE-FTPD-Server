@@ -33,4 +33,35 @@ This project implements a full automation of generating a timestamped backup of 
     SELECT * FROM table1;
 
 # Step 7: Create the file with name [ .my.cnf ] for storing the mysql credentials.
-[here](/Automating-BackUp-From-MySQL-To-PURE-FTPD-Server/.my.cnf)
+
+    [ client ]
+
+    username=root
+    password=my_pass
+
+# Step 8: Using Docker Compose configure pure-ftpd server locally.
+<h3> Here is the full docker-compose file.</h3>
+
+    version: '3'
+    services:
+      ftpd_server:
+        image: stilliard/pure-ftpd
+        container_name: pure-ftpd
+        ports:
+          - "21:21"
+          - "30000-30009:30000-30009"
+        volumes: 
+          - "/root/ftp_data:/home/username"
+          - "./passwd:/etc/pure-ftpd/passwd"
+        environment:
+          PUBLICHOST: "localhost"
+          FTP_USER_NAME: username
+          FTP_USER_PASS: mypass
+          FTP_USER_HOME: /home/username
+        restart: always
+
+<h4>Now run the below command to run the container.</h4>
+
+    docker-compose up -d
+
+
